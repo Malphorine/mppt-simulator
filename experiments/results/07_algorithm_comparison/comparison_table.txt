@@ -1,0 +1,6 @@
+Algorithm Comparison
+============================================================
+
+     Scenario               Algorithm  Energy Harvested (J)  Tracking Eff (%)  Steady State Eff (%)  Settling Time (s)  Rise Time (s)  Oscillation (W)  Total Sys Eff (%)
+0  Comparison       PerturbAndObserve           6321.294752         98.864648             99.949643                NaN            0.0         0.133662          97.190451
+1  Comparison  IncrementalConductance           6321.294752         98.864648             99.949643                NaN            0.0         0.133662          97.190451

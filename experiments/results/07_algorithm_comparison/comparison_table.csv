@@ -1,0 +1,3 @@
+,Scenario,Algorithm,Energy Harvested (J),Tracking Eff (%),Steady State Eff (%),Settling Time (s),Rise Time (s),Oscillation (W),Total Sys Eff (%)
+0,Comparison,PerturbAndObserve,6321.2947517718185,98.86464829281738,99.94964280204015,,0.0,0.13366207525938895,97.19045140920694
+1,Comparison,IncrementalConductance,6321.2947517718185,98.86464829281738,99.94964280204015,,0.0,0.13366207525938895,97.19045140920694

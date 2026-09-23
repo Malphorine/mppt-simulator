@@ -1,0 +1,39 @@
+import matplotlib.pyplot as plt
+import os
+
+formula_dir = r'C:\Users\ASUS\.gemini\antigravity\scratch\mppt_simulator\experiments\results\formulas'
+os.makedirs(formula_dir, exist_ok=True)
+
+# Matplotlib mathtext expressions
+formulas = {
+    # 1. SDM
+    'f_sdm.png': r'$I = I_{ph} - I_0 \left[ \exp\left(\frac{V + I \cdot R_s}{n \cdot N_s \cdot V_t}\right) - 1 \right] - \frac{V + I \cdot R_s}{R_{sh}}$',
+    # 2. Thermal voltage
+    'f_vt.png': r'$V_t = \frac{k_B \cdot T}{q} \approx 25.69\ \mathrm{mV} \quad (T = 25^\circ\mathrm{C})$',
+    # 3. Rin
+    'f_rin.png': r'$R_{in,eff} = R_{load} \cdot \frac{(1 - D)^2}{\eta}$',
+    # 4. Boost
+    'f_boost.png': r'$V_{out} = \frac{V_{in}}{1 - D} \cdot \eta$',
+    # 5. INC
+    'f_inc.png': r'$\frac{dP}{dV} = 0 \quad \Rightarrow \quad \frac{dI}{dV} = -\frac{I}{V}$',
+    # 6. Iph
+    'f_iph.png': r'$I_{ph}(G, T) = \frac{G}{G_0} \cdot \left[ I_{ph,0} + \alpha_{sc} \cdot (T - T_0) \right]$',
+    # 7. I0
+    'f_i0.png': r'$I_0(T) = I_{0,0} \cdot \left(\frac{T}{T_0}\right)^3 \cdot \exp\left[\frac{q}{k_B} \left(\frac{E_{g,0}}{T_0} - \frac{E_g(T)}{T}\right)\right]$',
+    # 8. Eta
+    'f_eta.png': r'$\eta_{MPPT} = \frac{P_{tracked}}{P_{ideal, MPP}} \times 100\%$',
+    # 9. Pout
+    'f_pout.png': r'$P_{out} = V_{out} \cdot I_{out} \leq P_{in} - P_{loss}$'
+}
+
+for fname, expr in formulas.items():
+    fig = plt.figure(figsize=(9, 1.6), dpi=300)
+    fig.patch.set_alpha(0.0)
+    plt.text(0.5, 0.5, expr, fontsize=20, color='#1E3A8A', ha='center', va='center', weight='bold')
+    plt.axis('off')
+    out_file = os.path.join(formula_dir, fname)
+    plt.savefig(out_file, bbox_inches='tight', transparent=True, dpi=300)
+    plt.close()
+    print(f'Rendered {fname}: {os.path.getsize(out_file)} bytes')
+
+print('All formulas successfully rendered!')

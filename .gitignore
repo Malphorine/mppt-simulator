@@ -1,0 +1,32 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment & caches
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+.env
+
+# Temporary / Scratch inspection scripts
+*.backup.pptx
+user_detailed_inspect.txt
+user_slides_dump.txt
+test_eta.png
+test_render_cards.py
+test_render_losses.py
+test_render_sdm_card.py
+dump_first_4.py
+check_lock.py
+inspect_user_slides.py
+find_underscores.py
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

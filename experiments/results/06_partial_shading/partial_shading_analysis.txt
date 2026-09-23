@@ -1,0 +1,20 @@
+Partial Shading Analysis
+==================================================
+
+Module irradiances: [1000, 600, 300] W/m2
+Module temperatures: [25, 25, 25]  deg C
+
+Global Maximum Power Point (GMPP):
+  V = 132.33 V, I = 10.11 A, P = 1338.2 W
+
+All local maxima (sorted by power):
+  GMPP: V = 132.26 V, I = 10.12 A, P = 1338.2 W
+  LMPP-1: V = 130.23 V, I = 6.07 A, P = 790.1 W
+  LMPP-2: V = 130.43 V, I = 3.03 A, P = 395.6 W
+
+Total peaks found: 3
+
+NOTE: Conventional P&O can become trapped around a local maximum
+under partial shading. It does NOT always find the global maximum.
+A scanning-based or global MPPT algorithm is needed for reliable
+global MPP tracking under partial shading conditions.

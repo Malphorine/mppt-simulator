@@ -1,0 +1,78 @@
+Experiment: exp4_po
+Algorithm: PerturbAndObserve
+Scenario: Temp Rise
+Simulation Time: 0.45s
+============================================================
+
+METRICS
+----------------------------------------
+========================================
+MPPT SIMULATION METRICS REPORT
+========================================
+
+[Power Output]
+Max Theoretical Power:     400.33 W
+Max Tracked Power:         400.28 W
+Average Tracked Power:     382.25 W
+
+[Tracking Performance]
+Avg Tracking Efficiency:   99.85 %
+Steady-State Efficiency:   99.94 %
+Steady-State Error:        0.23 W
+Settling Time (2%):        Did not settle
+Rise Time (10-90%):        0.0000 s
+Power Oscillation (StdDev):0.25 W
+
+[Energy & Losses]
+Energy Harvested:          7645.04 J
+Theoretical Max Energy:    7657.10 J
+Total MPPT Loss:           12.07 J
+Total Converter Loss:      367.96 J
+
+[System Efficiency]
+Avg Converter Efficiency:  98.25 %
+Total System Efficiency:   98.10 %
+
+[Final State]
+Voltage:                   36.81 V
+Current:                   9.91 A
+Power:                     364.78 W
+Duty Cycle:                0.5800
+
+VALIDATION
+----------------------------------------
+==================================================
+VALIDATION REPORT: Temp Rise | PerturbAndObserve
+==================================================
+Overall Status: PASSED
+
+[Theoretical vs MPPT Performance (Steady State)]
+Metric     | Theoretical     | Actual (MPPT)   | Error %   
+-------------------------------------------------------
+Voltage    | 37.33           | 37.27           | 0.19      
+Current    | 9.79            | 9.80            | 0.13      
+Power      | 365.39          | 365.15          | 0.06      
+
+[Performance Metrics]
+Tracking Efficiency: 99.94 %
+Settling Time:       Did not settle
+
+[Sanity Checks]
+[PASS] P = V x I                : Valid
+[PASS] Power is Non-negative    : Valid
+[PASS] No NaN Values            : Valid
+[PASS] No Infinity Values       : Valid
+[PASS] Pmax approx Vmp x Imp    : Valid
+[PASS] Duty Cycle Range         : Valid
+[PASS] PV Voltage Non-negative  : Valid
+[PASS] PV Current Non-negative  : Valid
+[PASS] Tracking Eff [0, 110]    : Valid
+[PASS] Converter Eff [0, 1.05]  : Valid
+[PASS] Energy Conservation      : Valid
+[PASS] No Negative Resistance   : Valid
+[PASS] Positive Irradiance      : Valid
+[PASS] Reasonable Temperature   : Valid
+[PASS] Voltage Limits           : Valid
+[PASS] Current Limits           : Valid
+[PASS] Steady State Oscillation : Valid
+[PASS] Final Efficiency > 90%   : Valid
